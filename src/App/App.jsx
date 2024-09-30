@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import './App.css';
-import Spotify from './api/Spotify';
+import styles from './App.module.css';
+import Spotify from '../api/Spotify';
 
 function App() {
   const [isAuthorized, setAuthorized] = useState(false);
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <h1>TrackVerse</h1>
+      <h1 className={styles.title}>TrackVerse</h1>
       {!isAuthorized ? <p>Please Log in...</p> : <p>Logged in</p>}
     </>
   );
